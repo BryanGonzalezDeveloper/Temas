@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Temas.cs" />
     <EmbeddedResource Include="frmTemas.resx">
       <DependentUpon>frmTemas.cs</DependentUpon>
     </EmbeddedResource>

@@ -16,50 +16,34 @@ namespace Temas
         {
             InitializeComponent();
         }
-
+        Temas objTema;
         private void frmTemas_Load(object sender, EventArgs e)
         {
             lblFecha.Text = DateTime.Now.ToLongDateString();
+            objTema = new Temas();
+            objTema.cambiarColor = cambiarTema;
         }
 
         private void tick_hora_Tick(object sender, EventArgs e)
         {
-            lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            lblHora.Text= DateTime.Now.ToString("hh:mm:ss tt");
         }
 
-        private void btnDefault_Click(object sender, EventArgs e)
+        private void ColorTema(object sender, EventArgs e)
         {
-
+            objTema.cambiarColorTema(((Button)sender).Text);
+           
         }
 
-        private void btnAzul_Click(object sender, EventArgs e)
+        void cambiarTema(Color sup,Color lat,Color cont,Color font)
         {
-
+            pnlSuperior.BackColor = sup;
+            pnlLateral.BackColor = lat;
+            pnlContenedor.BackColor = cont;
+            lblFecha.ForeColor = font;
+            lbl.ForeColor = font;
+            lblHora.ForeColor = font;
         }
 
-        private void BtnRojo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnNaranja_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRosa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnGris_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVerde_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
